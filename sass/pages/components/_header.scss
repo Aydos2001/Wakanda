@@ -1,0 +1,61 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 0;
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5px;
+
+        img {
+            width: 41px;
+            height: 24px;
+        }
+
+        span {
+            font-weight: 700;
+            font-size: 22px;
+        }
+    }
+
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+            li {
+                font-weight: 500;
+                cursor: pointer;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 2px;
+                    bottom: 0;
+                    width: 0px;
+                    left: 0;
+                    background-color: blue;
+                    transition: .3s ease-in-out;
+                }
+
+                &:hover {
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
